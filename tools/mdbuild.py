@@ -81,13 +81,13 @@ def navchange(data):
     # Add selected condition statement to links
     data = re.sub('(href="([^"]+)")', addSelectConditional, data)
     return data
-  
+
 def addSelectConditional(matchobj):
     url = matchobj.group(0).replace('href=', '').replace('"', '')
     html = ('{{% if (doc_name == "{0}") %}} class="is-selected"'
             '{{% endif %}} href="{0}"')
     return html.format(url)
-  
+
 def main():
     global doc_template
     global doc_nav
@@ -165,7 +165,7 @@ class Page:
            parsing."""
         self.content = self.content
         # self.content = re.sub('\]\(./media/|\]\(media/',
-        #                       r'\](../media/',self.content)
+        #                       r'\](./media/',self.content)
 
     def parse(self):
         self.parsed = self.parser.convert(self.content)

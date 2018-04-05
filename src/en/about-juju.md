@@ -1,4 +1,4 @@
-Title: What is Juju?  
+Title: What is Juju?
 
 # What is Juju?
 
@@ -60,7 +60,7 @@ organisation, it is common for different teams choose different tools; Juju
 allows teams to pick whatever works for them and their expertise in their
 application, but still reuse whatever they want from other teams.
 
-![charm diagram](../media/about-charms.png)
+![charm diagram](./media/about-charms.png)
 
 Different charms can use entirely different configuration management tools.
 
